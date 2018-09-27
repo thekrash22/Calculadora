@@ -3,8 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Taller</title>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    
 </head>
 <body>
-    <h1>Wellcome</h1>
+    <form class="bd-example">
+  <fieldset>
+    <legend>Calculadora</legend>
+
+    <p>
+      <label for="input">Valor1</label>
+      <input type="integer" id="valor1">
+    </p>
+    <p>
+      <label for="input">Valor2</label>
+      <input type="integer" id="valor2">
+    </p>
+
+    <p>
+      <label for="select">Seleccione Operacion</label>
+      <select id="operacion">
+        <option value="">Seleccione...</option>
+          <option value="">Suma</option>
+          <option value="">Resta</option>
+          <option value="">Multiplicacion</option>
+          <option value="">Division</option>
+      </select>
+    </p>
+    <p>
+        <label>Resultado</label>
+        <label id="resultado"></label>
+    </p>
+    <p>
+      <button type="submit">Calcular</button>
+    </p>
+
+  </fieldset>
+</form>
+    
 </body>
 </html>
