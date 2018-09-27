@@ -41,15 +41,26 @@
     </p>
 
   </fieldset>
+    <fieldset>
+        <p>
+          <label for="input">Numero</label>
+          <input type="integer" id="numero">
+        </p>
+        <p>
+            <button id="tabla">
+                Generar tabla
+            </button>
+        </p>
+    </fieldset>
 
 </body>
 <script>
     $( "#calcular" ).click(function() {
         var resultado;
-        var a = $('#valor1').val();
-        var b = $('#valor2').val();
+        var a = parseInt($('#valor1').val());
+        var b = parseInt($('#valor2').val());
         var operacion = $('#operacion').val();
-        console.log(operacion);
+        
         switch(operacion){
                  case '1':
                     resultado = a+b;
@@ -64,7 +75,18 @@
                     resultado = a/b;
                     break;
         }
-        console.log(resultado);
+        $('#resultado').text(resultado);
+        //console.log(resultado);
+    });
+
+    $('#tabla').click(function(){
+        var num = parseInt($('#numero').val());
+        
+        var tmp;
+        for(var i =1 ; i<=10;i++){
+            tmp = num*i;
+            console.log(tmp);
+        }
     });
 </script>
 </html>
